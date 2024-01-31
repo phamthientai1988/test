@@ -643,7 +643,6 @@ end
 spawn(function()
     while wait() do
         if _G.AutoFarm then
-			HubLoading()
             pcall(function()
                 local QuestTitle = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text
                 if not string.find(QuestTitle, NameMon) then
@@ -682,6 +681,7 @@ spawn(function()
                                             v.Head.CanCollide = false
                                             v.HumanoidRootPart.Size = Vector3.new(100,100,100)
                                             StartMagnet = true
+											HubLoading()
                                             game:GetService'VirtualUser':CaptureController()
                                             game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
                                         until not _G.AutoFarm or v.Humanoid.Health <= 0 or not v.Parent or game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false
