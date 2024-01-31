@@ -1,3 +1,7 @@
+repeat 
+	wait() 
+until game:IsLoaded(10)
+
 if game.PlaceId == 2753915549 then
     World1 = true
 elseif game.PlaceId == 4442272183 then
@@ -11,7 +15,8 @@ _G.AutoFarm = true
 _G.SelectWeapon = "Melee"
 _G.FastAttack = "Fastattack"
 _G.FastAttackDelay = 0.1
-
+_G.BringMode = 300
+_G.BringMonster = true
 BypassTP = true 
 PosY = 30
 function CheckQuest() 
@@ -952,6 +957,7 @@ end
         TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
         {CFrame = Pos}
     ):Play()
+	HubLoading("TP " .. Speed)
 end
 
     function TP1(Pos)
@@ -976,7 +982,6 @@ end
             TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
             {CFrame = Pos}
         ):Play()
-		HubLoading("TP1 ")
 		HubLoading("TP1 " .. Speed)
 end
 
@@ -1002,7 +1007,6 @@ end
             TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
             {CFrame = Pos}
         ):Play()
-		HubLoading("topos ")
 		HubLoading("topos " .. Speed)
 end
 
