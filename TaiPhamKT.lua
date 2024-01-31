@@ -11,6 +11,9 @@ _G.AutoFarm = true
 _G.SelectWeapon = "Melee"
 _G.FastAttack = "Fastattack"
 _G.FastAttackDelay = 0.1
+
+BypassTP = true 
+PosY = 30
 function CheckQuest() 
     MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
     if World1 then
@@ -637,13 +640,10 @@ function CheckQuest()
     end
 end
 
-
-BypassTP = true 
-PosY = 30
-
 spawn(function()
     while wait() do
         if _G.AutoFarm then
+			HubLoading()
             pcall(function()
                 local QuestTitle = game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Container.QuestTitle.Title.Text
                 if not string.find(QuestTitle, NameMon) then
@@ -1240,6 +1240,7 @@ function EquipWeapon(ToolSe)
     end
 end
 
+function HubLoading()
 spawn(function() 
     repeat
         task.wait()
@@ -1250,15 +1251,7 @@ spawn(function()
     repeat
         task.wait()
     until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
-    wait(1.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red>dsc.gg/heiskso<Color=/>"):Display()
-    wait(.5)
-    require(game.ReplicatedStorage.Notification).new("<Color=Red>Heiskso Hub Premium!<Color=/>"):Display()
-    wait(.14)
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Hãy sử dụng Fluxus để có trải nghiệm tốt!!<Color=/>"):Display()
-    wait(.24)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Tham gia disocrd để cập nhật thông tin mới nhất nhé<Color=/>"):Display()
-    wait(.29)
-    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Channel : dsc.gg/heiskso <Color=/>"):Display()
     wait(.36)
 end)
+end
