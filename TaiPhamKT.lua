@@ -976,6 +976,8 @@ end
             TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
             {CFrame = Pos}
         ):Play()
+		HubLoading("TP1 ")
+		HubLoading("TP1 " .. Speed)
 end
 
     function topos(Pos)
@@ -1000,6 +1002,8 @@ end
             TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
             {CFrame = Pos}
         ):Play()
+		HubLoading("topos ")
+		HubLoading("topos " .. Speed)
 end
 
 function TPB(CFgo)
