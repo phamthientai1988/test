@@ -6365,22 +6365,8 @@ task.spawn(
                         if v.Name == "Tushita" then
                             Tushita:Set("✅ : Tushita")
                         end
-                    end
-                end
-            end
-        )
-    end
-)
-
 ---------------- Gun Check ----------------
-task.spawn(
-    function()
-        while task.wait() do
-            pcall(
-                function()
-                    for i, v in pairs(
-                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")
-                    ) do
+                        for i, v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
                         if v.Name == "Kabucha" then
                             Kabucha:Set("✅ : Kabucha")
                         end
@@ -6390,84 +6376,66 @@ task.spawn(
                         if v.Name == "Bizarre Rifle" then
                             BizarreRifle:Set("✅ : Bizarre Rifle")
                         end
-                    end
-                end
-            )
-        end
-    end
-)
-
+                        end
 ---------------- Quest Check ----------------
-task.spawn(
-    function()
-        while task.wait() do
-            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress", "Bartilo") == 3 then
-                BartiloQuest:Set("✅ : Bartilo Quest")
-            end
-            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables").FlamingoAccess == nil then
-            else
-                DonSwanQuest:Set("✅ : Don Swan Quest")
-            end
-            if game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("ZQuestProgress", "Check") == 1 then
-                KillDonSwan:Set("✅ : Kill Don Swan")
-            end
-        end
-    end
-)
-
+                        if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BartiloQuestProgress", "Bartilo") == 3 then
+                            BartiloQuest:Set("✅ : Bartilo Quest")
+                        end
+                        if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetUnlockables").FlamingoAccess == nil then
+                        else
+                            DonSwanQuest:Set("✅ : Don Swan Quest")
+                        end
+                        if game:GetService("ReplicatedStorage").Remotes["CommF_"]:InvokeServer("ZQuestProgress", "Check") == 1 then
+                            KillDonSwan:Set("✅ : Kill Don Swan")
+                        end
 ---------------- Legendary Sword Check ----------------
-task.spawn(
-    function()
-        while task.wait() do
-            pcall(
-                function()
-                    for i, v in pairs(
-                        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")
-                    ) do
-                        if v.Name == "Shisui" then
-                            Shisui:Set("✅ : Shisui")
+
+                        for i, v in pairs(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("getInventoryWeapons")) do
+                            if v.Name == "Shisui" then
+                                Shisui:Set("✅ : Shisui")
+                            end
+                            if v.Name == "Saddi" then
+                                Saddi:Set("✅ : Saddi")
+                            end
+                            if v.Name == "Wando" then
+                                Wando:Set("✅ : Wando")
+                            end
+                            if v.Name == "True Triple Katana" then
+                                TrueTripleKatana:Set("✅ : True Triple Katana")
+                            end
                         end
-                        if v.Name == "Saddi" then
-                            Saddi:Set("✅ : Saddi")
-                        end
-                        if v.Name == "Wando" then
-                            Wando:Set("✅ : Wando")
-                        end
-                        if v.Name == "True Triple Katana" then
-                            TrueTripleKatana:Set("✅ : True Triple Katana")
-                        end
+---------------- Melee Check ----------------
+
+                            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman", true) == 1 then
+                                Superhuman:Set("✅ : Superhuman")
+                            end
+                            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep", true) == 1 then
+                                DeathStep:Set("✅ : Death Step")
+                            end
+                            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate", true) == 1 then
+                                SharkmanKarate:Set("✅ : Sharkman Karate")
+                            end
+                            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw", true) == 1 then
+                                ElectricClaw:Set("✅ : Electric Claw")
+                            end
+                            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon", true) == 1 then
+                                DragonTalon:Set("✅ : Dragon Talon")
+                            end
+                            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodHuman", true) == 1 then
+                                GodHuman:Set("✅ : God Human")
+                            end
+
+
                     end
                 end
-            )
-        end
+            end
+        )
     end
 )
 
----------------- Melee Check ----------------
-task.spawn(
-    function()
-        while task.wait() do
-            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySuperhuman", true) == 1 then
-                Superhuman:Set("✅ : Superhuman")
-            end
-            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep", true) == 1 then
-                DeathStep:Set("✅ : Death Step")
-            end
-            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySharkmanKarate", true) == 1 then
-                SharkmanKarate:Set("✅ : Sharkman Karate")
-            end
-            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyElectricClaw", true) == 1 then
-                ElectricClaw:Set("✅ : Electric Claw")
-            end
-            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDragonTalon", true) == 1 then
-                DragonTalon:Set("✅ : Dragon Talon")
-            end
-            if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodHuman", true) == 1 then
-                GodHuman:Set("✅ : God Human")
-            end
-        end
-    end
-)
+
+
+
 task.spawn(
     function()
         while wait() do
