@@ -83,13 +83,8 @@ local AlphaHubPaid = Instance.new("ScreenGui")
 AlphaHubPaid.Name = _G.AlphaHub .."," .. _G.Version
 AlphaHubPaid.Parent = game.CoreGui
 AlphaHubPaid.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+AlphaHubPaid.Enabled = true
 
-game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
-	if inputObject.KeyCode == Enum.KeyCode.RightControl then
-		wait()
-		AlphaHubPaid.Enabled = not AlphaHubPaid.Enabled
-	end
-end)
 
 function AlphaHub:Window(text)
 	local currentservertoggled = ""
