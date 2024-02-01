@@ -355,12 +355,6 @@ RadientPaidSC.Name = getgenv().Key .."," .. getgenv().id
 RadientPaidSC.Parent = game.CoreGui
 RadientPaidSC.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
-   if inputObject.KeyCode != Enum.KeyCode.RightControl then
-      wait()
-      RadientPaidSC.Enabled = not RadientPaidSC.Enabled
-   end
-end)
 
 function EngUi:Window(text,maincolor)
 
