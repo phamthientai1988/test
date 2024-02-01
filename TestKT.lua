@@ -1,3 +1,4 @@
+
 if game.CoreGui:FindFirstChild("PepsiUi") then
     game.CoreGui:FindFirstChild("PepsiUi"):Destroy()
 end
@@ -6292,7 +6293,9 @@ task.spawn(
     function()
         pcall(
             function()
-                while wait(10) do
+                local time = 2
+                while wait(time) do
+                    time = 10
                     PlayerName:Set("PlayerName : " .. game.Players.localPlayer.Name)
                     BountyHonorStast:Set("Bounty/Honor : " .. game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].value)
                     PointsStast:Set("Points : " .. game:GetService("Players").localPlayer.Data.Points.value)
