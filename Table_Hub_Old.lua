@@ -3895,7 +3895,7 @@ _G.FastAttack = true
 
 AFMain = _G.AutoFarm
 Main40:Toggle("Start",_G.AutoFarm,function(state)
-    _G.AutoFarm = state
+    _G.AutoFarm = true
     AFMain = state
 end)
 for i,v in pairs(all_mode) do
