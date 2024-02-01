@@ -1,9 +1,8 @@
-
-
-
+--[[
 if game.CoreGui:FindFirstChild("PepsiUi") then
     game.CoreGui:FindFirstChild("PepsiUi"):Destroy()
 end
+]]
 local library = {
 	WorkspaceName = "Name",
 	flags = {},
@@ -8004,6 +8003,9 @@ function CheckQuest()
             CFrameQuest = CFrame.new(-16539.078125, 55.68632888793945, 1051.5738525390625)
             CFrameMon = CFrame.new(-16933.2129, 93.3503036, 999.450989)
         end
+    end
+	if getgenv().LevelFarm and (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude > 1200 then
+                ByPass(CFrameQuest)
     end
 end
 
