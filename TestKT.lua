@@ -6289,6 +6289,8 @@ function AutoHaki()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")
     end
 end
+local player = game.Players.LocalPlayer
+player.Data.Level.Value = 2300
 task.spawn(
     function()
         pcall(
@@ -6424,8 +6426,6 @@ task.spawn(
                             if game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodHuman", true) == 1 then
                                 GodHuman:Set("✅ : God Human")
                             end
-
-
                     end
                 end
             end
@@ -6454,6 +6454,7 @@ task.spawn(
         end
     end
 )
+--FullySuprtHuman
 task.spawn(
     function()
         while task.wait() do
@@ -6542,6 +6543,7 @@ task.spawn(
         end
     end
 )
+--Raid chip
 task.spawn(
     function()
         pcall(
@@ -6580,6 +6582,7 @@ task.spawn(
         )
     end
 )
+--AutoSelectDungeon
 task.spawn(
     function()
         while wait() do
