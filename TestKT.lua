@@ -14,19 +14,19 @@
   
   if not getgenv().Config then
       getgenv().Config = {
-          autofarmlevel = false,
+          autofarmlevel = true,
           autonewworld = false,
-          selectweapon = "",
+          selectweapon = "Melee",
           fastattack = true,
           buso = true,
           ken = true,
-          auto_whitescreen = true,
+          auto_whitescreen = false,
           remove_effect = false
       }
   end
   
   getgenv().automelee = {
-      superhuman = false
+      superhuman = true
   }
   
   getgenv().noclip = false
