@@ -123,7 +123,7 @@ _G.HideUI = false]]
 
 
 _G.KAITAN1CLICK = true
-
+_G.AutoFarm = true
 
 if _G.KAITAN1CLICK then
     _G.Team = "Pirates"
@@ -4674,8 +4674,8 @@ function autofarm()
 		if _G.AutoFarm and not raidiing then
             game.Players.LocalPlayer.Character.Humanoid.Sit = false
 			if game:GetService("Players").LocalPlayer.PlayerGui.Main.Quest.Visible == false then
-				StatrMagnet = false
-                startATkmOb = false
+				StatrMagnet = true
+                startATkmOb = true
 				CheckQuest()
 				tweenAF2Page(CFrameQuest)
 				if (CFrameQuest.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 4 then
