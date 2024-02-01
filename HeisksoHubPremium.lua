@@ -624,13 +624,12 @@ function CheckQuest()
             CFrameQuest = CFrame.new(-16539.078125, 55.68632888793945, 1051.5738525390625)
             CFrameMon = CFrame.new(-16294.6748, 32.7874393, 1062.4856)
         elseif MyLevel >= 2525 then
-            Mon = "Posessed Mummy"
+            Mon = "Isle Champion"
             LevelQuest = 2
-            NameQuest = "HauntedQuest2"
-            NameMon = "Posessed Mummy"
-            CFrameQuest = CFrame.new(-9516.99316, 172.017181, 6078.46533, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-            CFrameMon = CFrame.new(-9582.0224609375, 6.251527309417725, 6205.478515625)	
-			
+            NameQuest = "TikiQuest2"
+            NameMon = "Isle Champion"
+            CFrameQuest = CFrame.new(-16539.078125, 55.68632888793945, 1051.5738525390625)
+            CFrameMon = CFrame.new(-16933.2129, 93.3503036, 999.450989)
         end
     end
 end
@@ -2531,96 +2530,125 @@ spawn(function()
         task.wait()
     until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
     wait(1.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>dsc.gg/heiskso<Color=/>"):Display()
+    wait(.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>Heiskso Hub Premium!<Color=/>"):Display()
+    wait(.14)
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Hãy sử dụng Fluxus để có trải nghiệm tốt!!<Color=/>"):Display()
+    wait(.24)
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Tham gia disocrd để cập nhật thông tin mới nhất nhé<Color=/>"):Display()
+    wait(.29)
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Channel : dsc.gg/heiskso <Color=/>"):Display()
+    wait(.36)
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Heiskso Hub", HidePremium = false, IntroText = "Heiskso Library", SaveConfig = true, ConfigFolder = "Heiskso Hub"})
 
+OrionLib:MakeNotification({
+	Name = "Heiskso Hub",
+	Content = "Choose Teams Bro?",
+	Image = "rbxassetid://15992619207",
+	Time = 7
+})
+
+OrionLib:MakeNotification({
+	Name = "Heiskso Hub",
+	Content = "Heiskso Hub Not Skidder, Please don't says",
+	Image = "rbxassetid://15992619207",
+	Time = 25
+})
+
+OrionLib:MakeNotification({
+    Name = "Heiskso Hub",
+    Content = "Please Wait loading script...,Do not enable any function",
+    Image = "rbxassetid://15992619207",
+    Time = 5
+})
 
 -------------Tab-----------------------
 
 local W = Window:MakeTab({
     Name = "👋 Welcome",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local M = Window:MakeTab({
     Name = "🏠 General",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local ST = Window:MakeTab({
     Name = "🛠️ Setting",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local IQ = Window:MakeTab({
     Name = "⚔️ Item & Quest",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local S = Window:MakeTab({
     Name = "📊 Stats",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local E = Window:MakeTab({
     Name = "🔎 ESP",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local RA = Window:MakeTab({
     Name = "🎆 Raid",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local LC = Window:MakeTab({
     Name = "🙆‍♂️ Local Players",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local Wld = Window:MakeTab({
     Name = "🌍 World Teleport",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local SV = Window:MakeTab({
     Name = "📈 Status Sever",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local D = Window:MakeTab({
     Name = "🍍 Devil Fruit",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local R = Window:MakeTab({
     Name = "☣️ Race V4",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local SH = Window:MakeTab({
     Name = "🛒 Shop",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
 local C = Window:MakeTab({
     Name = "🔰 Misc",
-    Icon = "rbxassetid://14919714384",
+    Icon = "rbxassetid://15992619207",
     PremiumOnly = false
 })
 
@@ -2630,10 +2658,16 @@ local Section = W:AddSection({
 })
 
 
+W:AddLabel("Script By Heiskso")
+
 local Section = W:AddSection({
     Name = "Update"
 })
 
+W:AddLabel("[+] Heiskso Hub is back!")
+W:AddLabel("[+] I Not Skidder!")
+W:AddLabel("[+] I Will overcome Banana Hub,Macu Hub!!!")
+W:AddLabel("[+] Load Script Faster!")
 
 local Section = W:AddSection({
     Name = "Status"
@@ -2833,8 +2867,24 @@ spawn(function()
     end
 end)
 
-_G.SelectWeapon = "Melee"
+local Section = M:AddSection({
+    Name = "Select Weapon"
+})
 
+M:AddParagraph("Select Weapon","Please Select Weapon")
+
+local WeaponList = {"Melee","Sword","Fruit","Gun"}
+_G.SelectWeapon = "Melee"
+M:AddDropdown({
+    Name = "Select Weapon",
+    Default = "",
+    Options = WeaponList,
+    Flag = "Select Weapon",
+    Save = true,
+    Callback = function(Value)
+        _G.SelectWeapon = Value
+    end    
+})
 task.spawn(function()
     while wait() do
         pcall(function()
@@ -2932,6 +2982,12 @@ if World2 and World1 then
     })
 end
 
+    local Section = M:AddSection({
+        Name = "Other Farm"
+    })
+
+    M:AddParagraph("Redeem Code","Click to Button to Reddem All Code In Blox Fruits.")
+
     local x2Code = {
         "JULYUPDATE_RESET",
         "staffbattle",
@@ -2975,6 +3031,12 @@ end
           end    
     })
 
+    local Section = M:AddSection({
+        Name = "Auto Farm Level"
+    })
+
+
+M:AddParagraph("Main Farm","Click to Box to Farm, I ready update new mob farm!.")
 
 ToggleFarm = M:AddToggle({
     Name = "Auto Farm",
@@ -2989,6 +3051,33 @@ ToggleFarm = M:AddToggle({
 
 local Section = M:AddSection({
     Name = "Mastery Menu"
+})
+
+M:AddParagraph("Mastery Menu","Click To Box to Start Farm Mastery")
+
+M:AddToggle({
+    Name = "Auto Farm BF Mastery",
+    Default = false,
+    Flag = "Mastery",
+    Save = true,
+    Callback = function(Value)
+        _G.AutoFarmFruitMastery = Value
+        StopTween(_G.AutoFarmFruitMastery)
+        if _G.AutoFarmFruitMastery == false then
+            UseSkill = false 
+        end
+    end    
+})
+
+M:AddToggle({
+    Name = "Auto Farm Gun Mastery",
+    Default = false,
+    Flag = "Gun Mastery",
+    Save = true,
+    Callback = function(Value)
+        _G.AutoFarmGunMastery = Value
+        StopTween(_G.AutoFarmGunMastery)
+    end    
 })
 
     M:AddSlider({
@@ -3006,10 +3095,88 @@ local Section = M:AddSection({
         end    
     })
 
+    M:AddToggle({
+        Name = "Skill Z",
+        Default = false,
+        Flag = "Skill Z",
+        Save = true,
+        Callback = function(Value)
+            _G.SkillZ = Value
+        end    
+    })
+
+    M:AddToggle({
+        Name = "Skill! X",
+        Default = false,
+        Default = false,
+        Flag = "Skill X",
+        Save = true,
+        Callback = function(Value)
+            _G.SkillX = Value
+        end    
+    })
+
+
+    M:AddToggle({
+        Name = "Skill C",
+        Default = false,
+        Default = false,
+        Flag = "Skill C",
+        Save = true,
+        Callback = function(Value)
+            _G.SkillC = Value
+        end    
+    })
+
+
+    M:AddToggle({
+        Name = "Skill V",
+        Default = false,
+        Default = false,
+        Flag = "Skill V",
+        Save = true,
+        Callback = function(Value)
+            _G.SkillV = Value
+        end    
+    })
+
+    M:AddToggle({
+        Name = "Skill F",
+        Default = false,
+        Default = false,
+        Flag = "Skill F",
+        Save = true,
+        Callback = function(Value)
+            _G.SkillF = Value
+        end    
+    })
+
     local Section = M:AddSection({
         Name = "Bring Mob"
     })
 
+M:AddToggle({
+    Name = "Bring Mobs[Fix]",
+    Default = true,
+    Flag = "Bring Mobs",
+    Save = false,
+    Callback = function(Value)
+        _G.BringMonster = Value
+    end    
+})
+local Bring = {"Low", "Normal", "Super Bring"}
+_G.BringMode = "Normal"
+M:AddDropdown({
+    Name = "Bring Mode",
+    Default = "Normal",
+    Options = Bring,
+    Default = false,
+    Flag = "Bring Mode",
+    Save = true,
+    Callback = function(Value)
+        _G.BringMode = Value
+    end    
+})
 spawn(function()
     while wait(.1) do
         if _G.BringMode then
@@ -3026,6 +3193,19 @@ spawn(function()
     end
 end)
 
+local Section = M:AddSection({
+    Name = "FastAttack :"
+})
+
+M:AddToggle({
+    Name = "FastAttack",
+    Default = true,
+    Flag = "FastAttack",
+    Save = false,
+    Callback = function(Value)
+        _G.FastAttack = Value
+    end    
+})
 local CameraShaker = require(game.ReplicatedStorage.Util.CameraShaker)
 CombatFrameworkR = require(game:GetService("Players").LocalPlayer.PlayerScripts.CombatFramework)
 y = debug.getupvalues(CombatFrameworkR)[2]
@@ -3059,13 +3239,123 @@ spawn(function()
     end)
 end)
 
-_G.FastAttack = "Fastattack"
-_G.FastAttackDelay = 0.1
+local AttackList = {"0", "0.1", "0.175", "0.2", "0.25", "0.3", "0.35", "0.4", "0.45", "0.5", "0.55", "0.6", "0.65", "0.7", "0.75", "0.8", "0.85", "0.9", "0.95", "0.1"}
+M:AddDropdown({
+	Name = "FastAttack Delay",
+	Default = "0.5",
+	Options = AttackList,
+    Flag = "FastAttack Delay",
+    Save = true,
+	Callback = function(Value)
+		_G.FastAttackDelay = Value
+	end    
+})
+spawn(function()
+    while wait(.1) do
+        if _G.FastAttackDelay then
+            pcall(function()
+                if _G.FastAttackDelay == "0" then
+                    _G.FastAttackDelay = 0
+                elseif _G.FastAttackDelay == "0.1" then
+                    _G.FastAttackDelay = 0.1
+                elseif _G.FastAttackDelay == "0.175" then
+                    _G.FastAttackDelay = 0.175
+                elseif _G.FastAttackDelay == "0.2" then
+                    _G.FastAttackDelay = 0.2
+                elseif _G.FastAttackDelay == "0.25" then
+                    _G.FastAttackDelay = 0.25
+                elseif _G.FastAttackDelay == "0.3" then
+                    _G.FastAttackDelay = 0.3
+                elseif _G.FastAttackDelay == "0.35" then
+                    _G.FastAttackDelay = 0.35
+                elseif _G.FastAttackDelay == "0.4" then
+                    _G.FastAttackDelay = 0.5
+                elseif _G.FastAttackDelay == "0.45" then
+                    _G.FastAttackDelay = 0.45
+                elseif _G.FastAttackDelay == "0.5" then
+                    _G.FastAttackDelay = 0.5
+                elseif _G.FastAttackDelay == "0.55" then
+                    _G.FastAttackDelay = 0.55
+                elseif _G.FastAttackDelay == "0.6" then
+                    _G.FastAttackDelay = 0.6
+                elseif _G.FastAttackDelay == "0.65" then
+                    _G.FastAttackDelay = 0.65
+                elseif _G.FastAttackDelay == "0.7" then
+                    _G.FastAttackDelay = 0.7
+                elseif _G.FastAttackDelay == "0.75" then
+                    _G.FastAttackDelay = 0.75
+                elseif _G.FastAttackDelay == "0.8" then
+                    _G.FastAttackDelay = 0.8
+                elseif _G.FastAttackDelay == "0.85" then
+                    _G.FastAttackDelay = 0.85
+                elseif _G.FastAttackDelay == "0.9" then
+                    _G.FastAttackDelay = 0.9
+                elseif _G.FastAttackDelay == "0.95" then
+                    _G.FastAttackDelay = 0.95
+                elseif _G.FastAttackDelay == "1" then
+                    _G.FastAttackDelay = 1
+                end
+            end)
+        end
+    end
+end)
 
-BypassTP = true 
+local Section = M:AddSection({
+    Name = "Bypass Teleport"
+})
+
+M:AddToggle({
+    Name = "Bypass TP[BETA]",
+    Default = false,
+    Flag = "Bypass TP",
+    Save = true,
+    Callback = function(Value)
+        BypassTP = true 
+    end    
+})
+
+
+local Section = M:AddSection({
+    Name = "Distance Mobs"
+})
+
 PosY = 30
---_G.Farmfast = Value
---StopTween(_G.Farmfast)
+M:AddSlider({
+    Name = "Distance Mob",
+    Min = 0,
+    Max = 65,
+    Default = PosY,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "Distance",
+    Default = false,
+    Flag = "Distance",
+    Save = true,
+    Callback = function(Value)
+        PosY = Value
+    end    
+})
+
+local Section = M:AddSection({
+    Name = "Farm Fast : Lv 10 => 120"
+})
+
+Farmfasttoggle = M:AddToggle({
+    Name = "Auto Farm Fast",
+    Default = false,
+    Flag = "Farm Fast",
+    Save = true,
+    Callback = function(Value)
+        _G.Farmfast = Value
+        StopTween(_G.Farmfast)
+    end    
+})
+
+local Section = M:AddSection({
+    Name = "Kaitun Met Vaiz"
+})
+
+M:AddParagraph("Kaitun/Cantay","Kaitun bản này đell khác gì bản kia.")
 
 M:AddToggle({
     Name = "Kaitun[Ko có kill players]",
@@ -3090,7 +3380,16 @@ M:AddToggle({
        StopTween(_G.Auto_Saber)
     end    
 })
-_G.AutoClick = false
+
+M:AddToggle({
+    Name = "Auto Click[Kick]",
+    Default = false,
+    Flag = "Auto Click",
+    Save = true,
+    Callback = function(Value)
+        _G.AutoClick = Value
+    end    
+})
 
 spawn(function()
     game:GetService("RunService").RenderStepped:Connect(function()
@@ -3118,6 +3417,9 @@ spawn(function()
     end
 end)
 
+   local Section = M:AddSection({
+    Name = "Mob & Boss Farm"
+})
 
 if World1 then
     M:AddDropdown({
@@ -3220,6 +3522,12 @@ spawn(function()
     end
 end
 end)
+
+local Section = M:AddSection({
+    Name = "Bone Menu"
+})
+
+local Bone = M:AddLabel("Bone : ")
 
 spawn(function()
     while wait() do
@@ -3351,6 +3659,11 @@ local EliteProgress = M:AddLabel("")
             end    
         })
 
+local Section = M:AddSection({
+    Name = "Boss"
+})
+
+M:AddParagraph("Auto Farm Boss :","Chờ Update thôi ae!!!")
 
     local Section = M:AddSection({
         Name = "Observation Haki"
@@ -3377,11 +3690,61 @@ local EliteProgress = M:AddLabel("")
         end    
     })
 
-_G.AutoDeathStep = fasle
-_G.AutoSharkman = fasle
-_G.AutoElectricClaw = fasle
-_G.AutoDragonTalon = fasle
-_G.Auto_God_Human = fasle
+    local Section = M:AddSection({
+        Name = "Melee v2"
+    })
+    
+    M:AddToggle({
+        Name = "Auto Death Step",
+        Default = false,
+        Flag = "Auto Death Step",
+        Save = true,
+        Callback = function(Value)
+            _G.AutoDeathStep = Value
+        end    
+    })
+
+    M:AddToggle({
+        Name = "Auto SharkMan Karate",
+        Default = false,
+        Flag = "Auto SharkMan",
+        Save = true,
+        Callback = function(Value)
+            _G.AutoSharkman = Value
+            StopTween(_G.AutoSharkman)
+        end    
+    })
+
+ M:AddToggle({
+        Name = "Auto Electric Claw",
+        Default = false,
+        Flag = "Auto Electric Claw",
+        Save = true,
+        Callback = function(Value)
+            _G.AutoElectricClaw = Value
+            StopTween(_G.AutoElectricClaw)
+        end    
+    })
+
+    M:AddToggle({
+        Name = "Auto Dragon Talon",
+        Default = false,
+        Flag = "Auto Dragon Talon",
+        Save = true,
+        Callback = function(Value)
+            _G.AutoDragonTalon = Value
+        end    
+    })
+
+    M:AddToggle({
+        Name = "Auto GodHuman",
+        Default = false,
+        Flag = "Auto GodHuman",
+        Save = true,
+        Callback = function(Value)
+            _G.Auto_God_Human = Value
+        end    
+    })
 
     ST:AddToggle({
         Name = "Auto Haki",
@@ -3538,6 +3901,10 @@ TogglePolev1Hop = IQ:AddToggle({
     end    
 })
 
+local Section = IQ:AddSection({
+    Name = "Second Sea"
+})
+
 IQ:AddToggle({
     Name = "Auto Second Sea",
     Default = false,
@@ -3549,7 +3916,9 @@ IQ:AddToggle({
     end    
 })
 
-
+local Section = IQ:AddSection({
+    Name = "Vampire"
+})
 IQ:AddToggle({
     Name = "Auto Vampire",
     Default = false,
@@ -3593,20 +3962,262 @@ BartiloToggle = IQ:AddToggle({
         StopTween(_G.AutoFarm)
     end    
 })
-_G.AutoThirdSea = Value
-_G.AutoBuyLegendarySword = Value
-_G.AutoBudySword = Value
-_G.AutoNevaSoulGuitar = Value    
-_G.AutoObservationHakiV2 = Value  
-Auto_Cursed_Dual_Katana = Value
-_G.Autotushita = Value
-_G.AutoCarvender = Value
-_G.AutoTwinHook = Value
-_G.Namfon = Value --"Automatically hit the dummy"
-_G.AutoFarmBossHallow = Value
-_G.AutoDarkDagger = Value
-_G.Hop = Value
+
+local Section = IQ:AddSection({
+    Name = "Next Sea Third"
+})
+
+
+IQ:AddToggle({
+    Name = "Auto Third Sea",
+    Default = false,
+    Flag = "Auto Third",
+    Save = true,
+    Callback = function(Value)
+        _G.AutoThirdSea = Value
+        StopTween(_G.AutoThirdSea)
+    end    
+})
+
+IQ:AddToggle({
+    Name = "Auto Buy Legend Sword",
+    Default = false,
+    Flag = "Auto Legend",
+    Save = true,
+    Callback = function(Value)
+        _G.AutoBuyLegendarySword = Value
+    end    
+})
+
+local Section = IQ:AddSection({
+    Name = "Buddy Sword"
+})
+
+IQ:AddToggle({
+    Name = "Auto Buddy Sword",
+    Default = false,
+    Flag = "Auto Buddy",
+    Save = true,
+    Callback = function(Value)
+        _G.AutoBudySword = Value
+        StopTween(_G.AutoBudySword)
+    end    
+})
+
+IQ:AddToggle({
+    Name = "Auto Buddy Sword[HOP]",
+    Default = false,
+    Flag = "Auto Buddy[HOP]",
+    Save = true,
+    Callback = function(Value)
+        _G.Hop = Value
+    end    
+})
+
+    local Section = IQ:AddSection({
+        Name = "Soul Guita"
+    })
+
+    IQ:AddToggle({
+        Name = "Auto Soul Guita",
+        Default = false,
+        Flag = "Auto Soul",
+        Save = true,
+        Callback = function(Value)
+            _G.AutoNevaSoulGuitar = Value    
+            StopTween(_G.AutoNevaSoulGuitar)
+        end    
+    })
+
+IQ:AddToggle({
+    Name = "Auto Soul Guita[HOP]",
+    Default = false,
+    Flag = "Auto Soul[HOP]",
+    Save = true,
+    Callback = function(Value)
+        _G.Hop = Value  
+    end    
+})
+
+IQ:AddToggle({
+    Name = "Auto Auto Observation V2",
+    Default = false,
+    Flag = "Auto ObservationV2",
+    Save = true,
+    Callback = function(Value)
+        _G.AutoObservationHakiV2 = Value  
+        StopTween(_G.AutoObservationHakiV2)
+    end    
+})
+
+local Section = IQ:AddSection({
+    Name = "Auto Dual Curset Katana[Not Work]"
+})
+
+IQ:AddToggle({
+    Name = "Auto Dual Curset Katana",
+    Default = false,
+    Flag = "Auto DualCursetKatana",
+    Save = true,
+    Callback = function(Value)
+        Auto_Cursed_Dual_Katana = Value
+        StopTween(Auto_Cursed_Dual_Katana)
+    end    
+})
+
+local Section = IQ:AddSection({
+    Name = "Tushita"
+})
+
+IQ:AddToggle({
+    Name = "Auto Tushita",
+    Default = false,
+    Flag = "Auto Tushita",
+    Save = true,
+    Callback = function(Value)
+        _G.Autotushita = Value
+        StopTween( _G.Autotushita)
+      
+    end    
+})
+
+IQ:AddToggle({
+    Name = "Auto Tushita[HOP]",
+    Default = false,
+    Flag = "Auto Tushita[HOP]",
+    Save = true,
+    Callback = function(Value)
+        _G.Hop = Value
+    end  
+})
+
+local Section = IQ:AddSection({
+    Name = "Cavander"
+})
+
+IQ:AddToggle({
+    Name = "Auto Cavander",
+    Default = false,
+    Flag = "Auto Cavander",
+    Save = true,
+    Callback = function(Value)
+        _G.AutoCarvender = Value
+        StopTween( _G.AutoCarvender)
+    end    
+})
+
+IQ:AddToggle({
+    Name = "Auto Cavander[HOP]",
+    Default = false,
+    Flag = "Auto Cavander[HOP]",
+    Save = true,
+    Callback = function(Value)
+        _G.Hop = Value
+    end    
+})
+
+        local Section = IQ:AddSection({
+            Name = "Twin Hook"
+        })
+
+        IQ:AddToggle({
+            Name = "Auto Twin Hook",
+            Default = false,
+            Flag = "Auto Twin",
+            Save = true,
+            Callback = function(Value)
+                _G.AutoTwinHook = Value
+                StopTween( _G.AutoTwinHook)
+            end    
+        })
         
+        IQ:AddToggle({
+            Name = "Auto Twin Hook[HOP]",
+            Default = false,
+            Flag = "Auto Twin[HOP]",
+            Save = true,
+            Callback = function(Value)
+                _G.Hop = Value
+            end    
+        })
+        
+        local Section = IQ:AddSection({
+            Name = "ArenaTrainer"
+        })
+
+        IQ:AddLabel("Cho thằng nào đell hiểu thì đây là tự động đánh hình nộm")
+
+        IQ:AddToggle({
+            Name = "Automatically hit the dummy",
+            Default = false,
+            Flag = "Auto dummy",
+            Save = true,
+            Callback = function(Value)
+                _G.Namfon = Value
+                StopTween(_G.Namfon)
+            end    
+        })
+
+        IQ:AddToggle({
+            Name = "Automatically hit the dummy[HOP]",
+            Default = false,
+            Flag = "Auto dummy[HOP]",
+            Save = true,
+            Callback = function(Value)
+                _G.Hop = Value
+            end    
+        })
+
+        local Section = IQ:AddSection({
+            Name = "Seperator Hallow Scythe"
+        })
+
+        IQ:AddToggle({
+            Name = "Auto Hallow Scythe",
+            Default = false,
+            Flag = "Auto Hallow",
+            Save = true,
+            Callback = function(Value)
+                _G.AutoFarmBossHallow = Value
+                StopTween(_G.AutoFarmBossHallow)
+            end    
+        })
+
+ToggleHallow = IQ:AddToggle({
+            Name = "Auto Hallow Scythe[HOP]",
+            Default = false,
+            Flag = "Auto Hallow[HOP]",
+            Save = true,
+            Callback = function(Value)
+                _G.Hop = Value
+            end    
+        })
+
+        local Section = IQ:AddSection({
+            Name = "Dark Dragger"
+        })
+
+        IQ:AddToggle({
+            Name = "Auto Dark Dragger",
+            Default = false,
+            Flag = "Auto Dark",
+            Save = true,
+            Callback = function(Value)
+                _G.AutoDarkDagger = Value
+                StopTween(_G.AutoDarkDagger)
+            end    
+        })
+
+        IQ:AddToggle({
+            Name = "Auto Dark Dragger[HOP]",
+            Default = false,
+            Flag = "Auto Dark[HOP]",
+            Save = true,
+            Callback = function(Value)
+                _G.Hop = Value
+            end    
+        })
+
         spawn(function()
             pcall(function()
                 while wait() do
@@ -3630,7 +4241,30 @@ _G.Hop = Value
         end)
     end
 
-_G.AutoSeaBest = Value
+    local Section = IQ:AddSection({
+        Name = "SeaBeast"
+    })
+
+    IQ:AddToggle({
+        Name = "Auto Seabeast",
+        Default = false,
+        Flag = "Auto Seabeast",
+        Save = true,
+        Callback = function(Value)
+            _G.AutoSeaBest = Value
+            StopTween(_G.AutoSeaBest)
+        end    
+    })
+
+IQ:AddToggle({
+    Name = "Auto Seabeast[HOP]",
+    Default = false,
+    Flag = "Auto Seabeast[HOP]",
+    Save = true,
+    Callback = function(Value)
+        _G.Hop = Value
+    end    
+})
 
 
 spawn(function()
@@ -7747,13 +8381,13 @@ pcall(function()
                 OrionLib:MakeNotification({
                     Name = "Heiskso Hub(Noitification)",
                     Content = "[EN] : Please cancel the farrm level quest (if any)",
-                    Image = "rbxassetid://14919714384",
+                    Image = "rbxassetid://15992619207",
                     Time = 9
                 })
                 OrionLib:MakeNotification({
                     Name = "Heiskso Hub(Noitification)",
                     Content = "[VN] : Làm ơn hủy nhiệm vụ farrm level(nếu có)",
-                    Image = "rbxassetid://14919714384",
+                    Image = "rbxassetid://15992619207",
                     Time = 9
                 })
             end
@@ -8071,7 +8705,7 @@ spawn(function()
             OrionLib:MakeNotification({
                 Name = "Heiskso Hub",
                 Content = "You not have beli or fragment!",
-                Image = "rbxassetid://14919714384",
+                Image = "rbxassetid://15992619207",
                 Time = 5
             })
             end
@@ -10693,7 +11327,7 @@ spawn(function()
                 OrionLib:MakeNotification({
                     Name = "Heiskso Hub",
                     Content = "Turn Off Hop Find Moon Please",
-                    Image = "rbxassetid://14919714384",
+                    Image = "rbxassetid://15992619207",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
@@ -10701,7 +11335,7 @@ spawn(function()
                 OrionLib:MakeNotification({
                     Name = "Heiskso Hub",
                     Content = "Hop Server",
-                    Image = "rbxassetid://14919714384",
+                    Image = "rbxassetid://15992619207",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
@@ -10709,7 +11343,7 @@ spawn(function()
                 OrionLib:MakeNotification({
                     Name = "Heiskso Hub",
                     Content = "Hop Server",
-                    Image = "rbxassetid://14919714384",
+                    Image = "rbxassetid://15992619207",
                     Time = 5
                 })
             elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709149680" then
@@ -10717,7 +11351,7 @@ spawn(function()
                 OrionLib:MakeNotification({
                     Name = "Heiskso Hub",
                     Content = "Hop Server",
-                    Image = "rbxassetid://14919714384",
+                    Image = "rbxassetid://15992619207",
                     Time = 5
                 })
             else
@@ -10730,7 +11364,7 @@ spawn(function()
 OrionLib:MakeNotification({
         Name = "Heiskso Hub",
         Content = "Loading script complete!, You can now enable the function!",
-        Image = "rbxassetid://14919714384",
+        Image = "rbxassetid://15992619207",
         Time = 5
     })
 
@@ -10763,6 +11397,6 @@ OrionLib:Init()
 OrionLib:MakeNotification({
     Name = "Heiskso Hub",
     Content = "Loading Config Complete!!",
-    Image = "rbxassetid://14919714384",
+    Image = "rbxassetid://15992619207",
     Time = 5
 })
