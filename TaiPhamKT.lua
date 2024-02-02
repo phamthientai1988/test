@@ -1732,8 +1732,8 @@ function HubLoading(step)
         repeat
             task.wait()
         until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
+
+        --require(game.ReplicatedStorage.Notification).new(step):Display()
         
-        require(game.ReplicatedStorage.Notification).new(step):Display()
-        wait(.36)
     end)
 end
