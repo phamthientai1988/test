@@ -11,8 +11,11 @@ elseif game.PlaceId == 7449423635 then
 else
     game:GetService("Players").LocalPlayer:Kick("Do not Support, Please wait...")
 end
+_G.Farmfast = true
+_G.SelectWeapon = "Combat"
+_G.AutoPlayerHunter = true
+_G.Auto_Stats_Kaitun = true
 _G.AutoFarm = true
-_G.SelectWeapon = "Melee"
 _G.FastAttack = "Fastattack"
 _G.FastAttackDelay = 0.1
 _G.BringMode = 300
