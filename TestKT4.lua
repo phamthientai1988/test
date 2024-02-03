@@ -7,7 +7,23 @@ elseif game.PlaceId == 7449423635 then
 else
     game:GetService("Players").LocalPlayer:Kick("Do not Support, Please wait...")
 end
-
+repeat wait() until game.Players
+repeat wait() until game.Players.LocalPlayer
+repeat wait() until game.ReplicatedStorage
+repeat wait() until game.ReplicatedStorage:FindFirstChild("Remotes");
+repeat wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui");
+repeat wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
+repeat wait() until game:GetService("Players").LocalPlayer.PlayerGui.Main:FindFirstChild("ChooseTeam")
+pcall(function()
+	game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("SetTeam","Pirates")
+	game.Players.LocalPlayer.Character.Head:Destroy()
+	workspace.CurrentCamera.CameraType = Enum.CameraType.Custom
+	game:GetService("Players").LocalPlayer.PlayerGui.Main.Beli.Visible = true
+	game:GetService("Players").LocalPlayer.PlayerGui.Main.Level.Visible = true
+	if game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam then
+		game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam:Destroy()
+	end
+end)
 function CheckQuest() 
     MyLevel = game:GetService("Players").LocalPlayer.Data.Level.Value
     if World1 then
