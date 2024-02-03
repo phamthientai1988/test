@@ -2530,12 +2530,41 @@ spawn(function()
         task.wait()
     until game.Players.LocalPlayer and game.Players.LocalPlayer.Team ~= nil 
     wait(1.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>dsc.gg/heiskso<Color=/>"):Display()
+    wait(.5)
+    require(game.ReplicatedStorage.Notification).new("<Color=Red>Heiskso Hub Premium!<Color=/>"):Display()
+    wait(.14)
     require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Hãy sử dụng Fluxus để có trải nghiệm tốt!!<Color=/>"):Display()
+    wait(.24)
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Tham gia disocrd để cập nhật thông tin mới nhất nhé<Color=/>"):Display()
+    wait(.29)
+    require(game.ReplicatedStorage.Notification).new("<Color=Yellow>Channel : dsc.gg/heiskso <Color=/>"):Display()
+    wait(.36)
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Heiskso Hub", HidePremium = false, IntroText = "Heiskso Library", SaveConfig = true, ConfigFolder = "Heiskso Hub"})
 
+OrionLib:MakeNotification({
+	Name = "Heiskso Hub",
+	Content = "Choose Teams Bro?",
+	Image = "rbxassetid://15992619207",
+	Time = 7
+})
+
+OrionLib:MakeNotification({
+	Name = "Heiskso Hub",
+	Content = "Heiskso Hub Not Skidder, Please don't says",
+	Image = "rbxassetid://15992619207",
+	Time = 25
+})
+
+OrionLib:MakeNotification({
+    Name = "Heiskso Hub",
+    Content = "Please Wait loading script...,Do not enable any function",
+    Image = "rbxassetid://15992619207",
+    Time = 5
+})
 
 -------------Tab-----------------------
 
@@ -3006,8 +3035,6 @@ end
         Name = "Auto Farm Level"
     })
 
-
-M:AddParagraph("Main Farm","Click to Box to Farm, I ready update new mob farm!.")
 
 ToggleFarm = M:AddToggle({
     Name = "Auto Farm",
