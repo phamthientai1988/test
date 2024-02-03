@@ -3164,7 +3164,7 @@ M:AddParagraph("Kaitun/Cantay","Kaitun bản này đell khác gì bản kia.")
 
 M:AddToggle({
     Name = "Kaitun[Ko có kill players]",
-    Default = false,
+    Default = true,
     Flag = "Kaitun",
     Save = true,
     Callback = function(Value)
