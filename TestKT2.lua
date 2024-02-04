@@ -617,10 +617,10 @@ function CheckQuest()
             CFrameQuest = CFrame.new(-16545.9355, 55.6863556, -173.230499)
             CFrameMon = CFrame.new(-16751.3125, 121.226219, -264.015015)
         elseif MyLevel == 2500 or MyLevel <= 2524 then
-            Mon = "Sun-kissed Warrio"
+            Mon = "Sun-kissed Warriors"
             LevelQuest = 1
             NameQuest = "TikiQuest2"
-            NameMon = "Sun-kissed Warrio"
+            NameMon = "Sun-kissed Warriors"
             CFrameQuest = CFrame.new(-16539.078125, 55.68632888793945, 1051.5738525390625)
             CFrameMon = CFrame.new(-16294.6748, 32.7874393, 1062.4856)
         elseif MyLevel >= 2525 then
